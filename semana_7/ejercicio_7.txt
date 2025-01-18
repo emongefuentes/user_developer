@@ -1,0 +1,52 @@
+def suma(a, b):
+    return a + b
+def resta(a, b):
+    return a - b
+def multiplicacion(a, b):
+    return a * b              
+def division(a,b):
+    if b == 0:
+        print("Error, no es posible la division por 0")
+        return a
+    return a / b
+
+def menu():
+    print("""
+          0.Salir
+          1.Suma
+          2.Resta
+          3.Multiplicación
+          4.División
+          5.Borrar
+          """)
+numero_actual = 0
+
+while True:
+    print(f"Numero actual = {numero_actual}")
+    menu()
+    
+    opcion = input("Seleccion una opcion del menú: ")
+    
+    if opcion == "0":
+        break
+    elif opcion in ["1","2","3","4"]:
+        while True:
+            try:
+                nuevo_numero=int(input("Digite un numero a operar: "))
+                break
+            except ValueError:
+                print("Error. Inserte una opccion de la lista...")
+            
+        if opcion == "1":
+            numero_actual=suma(numero_actual,nuevo_numero)   
+        elif opcion == "2":
+            numero_actual=resta(numero_actual,nuevo_numero)
+        elif opcion == "3":
+            numero_actual=multiplicacion(numero_actual,nuevo_numero) 
+        elif opcion == "4":
+            numero_actual=division(numero_actual,nuevo_numero)
+    elif opcion == "5": 
+        numero_actual=0
+        
+    else:
+        print("opcion invalida")

@@ -1,0 +1,15 @@
+"""
+Cree un programa que le pida tres números al usuario y muestre el mayor.
+"""
+
+numero_uno = int(input("Ingrese el primer número: "))
+numero_dos = int(input("Ingrese el segundo número: "))
+numero_tres = int(input("Ingrese el tercer número: "))
+
+if numero_uno > numero_dos and numero_uno > numero_tres:
+    print(f"El número uno {numero_uno} es mayor que {numero_dos} y {numero_tres}")
+elif numero_dos > numero_uno  and numero_dos > numero_tres:
+    print(f"El número dos {numero_dos} es mayor que {numero_uno} y {numero_tres}")    
+    
+else:
+    print(f"El número tres {numero_tres} es mayor que {numero_uno} y {numero_dos}") 

@@ -1,0 +1,16 @@
+
+"""6. Cree una función que acepte un string con palabras
+separadas por un guión y retorne un string igual 
+pero ordenado alfabéticamente."""
+
+cadena = "python-variable-funcion-computadora-monitor"
+print(f"La candena actual es: {cadena}")
+
+def ordenar_cadena():
+    lista = cadena.split("-")
+    lista.sort()
+    nueva_cadena = "-".join(lista)
+    print(f"     Cadena ordenada: {nueva_cadena}")
+    
+ordenar_cadena()  
+

@@ -1,0 +1,10 @@
+print ("""
+       2. Cree un programa que itere e imprima un string letra por letra de derecha a izquierda.
+            a.Pista: investigue de que otras maneras se puede usar el `range`.
+       """)
+
+list_string = "Programacion"
+
+for index in range(0, len(list_string)):
+    char = list_string[index]
+    print(char)   

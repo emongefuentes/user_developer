@@ -1,0 +1,21 @@
+Ejercicio 2.
+
+Inicio
+
+1. Despertar
+2. Levantarse
+3. Banarse, O desayunar, O hacer ejercicio.
+4. Mientras no tenga hambre, O sean las 12 medio dia
+i. Estudiar
+5. mientras no sea domingo O sabado
+i. Alistarse para el trabajo
+6. Si esta lloviendo
+7. ponerse la capa
+8. sino, sacar la moto del garage
+9. conducir al trabajo
+10. mientras no sean las 10 pm
+i. continuar trabajando
+11. retomar el camino a casa.
+12. Dormir
+
+Fin

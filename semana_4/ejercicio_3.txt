@@ -1,0 +1,22 @@
+"""Cree un programa que le pida al usuario su nombre, apellido, y edad,
+y muestre si es un bebé, niño, preadolescente, adolescente, 
+adulto joven, adulto, o adulto mayor."""
+
+nombre = input("Digite su nombre...")
+apellido = input("Digite su apellido...")
+edad = int(input("Ingrese su edad..."))
+
+if edad >= 65:
+    print(f"El usuario {nombre} {apellido} es un adulto Mayor.")
+elif edad >= 30 and edad < 65:
+    print(f"El usuario {nombre} {apellido} es un adulto.")
+elif edad >= 18 and edad < 30:
+    print(f"El usuario {nombre} {apellido} es un adulto joven.")
+elif edad >= 15 and edad < 18:
+    print(f"El usuario {nombre} {apellido} es un adolescente.")        
+elif edad >= 10 and edad < 15:
+    print(f"El usuario {nombre} {apellido} es un preadolescente.")
+elif edad >= 2 and edad < 10:
+    print(f"El usuario {nombre} {apellido} es un niño.")
+else:
+    print(f'El usuario {nombre} {apellido} es un bebé')

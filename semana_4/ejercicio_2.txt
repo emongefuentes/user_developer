@@ -1,0 +1,14 @@
+print(" *******Ejercicio 2 semana 4 *******")
+print(" ***********************************")
+print("Digite su nombre: ")
+nombre = input()
+print("Digite su apellido: ")
+apellido = input()
+print("Digite el dominio: ")
+dominio = input()
+
+
+template_email = 'El correo electronico es: {name}.{second_name}@{domain}.com'
+formatted_string = template_email.format(name=nombre, second_name=apellido, domain=dominio)
+
+print(formatted_string)

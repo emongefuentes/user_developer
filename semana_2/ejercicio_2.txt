@@ -1,0 +1,19 @@
+**Ejercicio 2**
+
+Inicio
+
+`tiempo_en_segundos` = 0
+
+mostrar “ingrese un tiempo en segundos”
+
+// tambien podria crear una variable que se llame diezMinutos e igualarla a 600//
+
+si (`tiempo_en_segundos`  < 600)
+
+`resultadoFaltante` = 600 -`tiempo_en_segundos` 
+Mostrar `resultadoFaltante` 
+
+      sino
+           Mostrar “Mayor”
+
+Fin

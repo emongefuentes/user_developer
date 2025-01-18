@@ -1,0 +1,66 @@
+
+print("""Cree un programa que le pida al usuario 10 números, 
+      y al final le muestre todos los números que ingresó, 
+      seguido del numero ingresado más alto.""")    
+
+
+my_list = []
+counter = 1
+numero_mayor = 0
+numero_menor = 0
+
+while (counter < 11):
+    numero = int(input(f"{counter}. Ingrese un numero: "))
+    counter = counter + 1
+    my_list.append(numero)       
+      
+my_list.sort(reverse=True) #para este ejercicio investigué si habia una funcion que permitiera ordenar el contenido de la lista.
+print(my_list)
+
+
+EJERCICIOS DICCIONARIO
+
+1.Cree un diccionario que guarde la siguiente información sobre un hotel:
+1.1. El key de habitaciones debe ser una lista, y cada habitación debe tener la siguiente información:
+// Este ejercicio, entiendo que debo hacer esto, pero no me queda completamente claro si cumplí con el objetivo.
+
+diccionario_hotel = { "nombre" : "El Coyote",
+                     "Puntuacion" : "6 estrellas",
+                     
+                     "diccionario_habitaciones" : [  "1", "1", "10",
+                                                      "2", "2", "20",
+                                                     "3", "3", "30"]
+                        
+} 
+
+print(diccionario_hotel)
+
+"""Cree un programa que cree un diccionario
+usando dos listas del mismo tamaño, usando
+una para sus keys, y la otra para sus values."""
+
+dict_a = {}
+
+list_a=['first_name','last_name','role']
+list_b=['Edgar','Monge','Student S.E']
+
+dict_a [list_a[0]] = list_b[0]
+dict_a [list_a[1]] = list_b[1]
+dict_a [list_a[2]] = list_b[2]
+
+print(dict_a)
+
+
+"""Cree un programa que use una lista 
+para eliminar keys de un diccionario."""
+
+list_of_keys = ['access_level', 'age']
+
+employe = {'name' : 'edgar', "email" : "emonge@yahoo.com", 'access_level' : 5, 'age' : 28}
+
+print(employe)
+
+delete_item = employe.pop(list_of_keys[0])
+delete_item = employe.pop(list_of_keys[1])
+
+print(employe)
