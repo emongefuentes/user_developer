@@ -1,21 +1,22 @@
 class Person:
     pass
-
 class Bus:
-    maximum_passengers = 5
-    counter = 0
+    def __init__(self):
+        self.maximum_passengers = 5
+        self.passengers = []
     
     def get_in_the_bus(self):
-        if self.counter < self.maximum_passengers:
-            self.counter += 1
-            print(f"Current amount of passengers is {self.counter}")
+        if len(self.passengers) < self.maximum_passengers:
+            person = Person()
+            self.passengers.append(person)
+            print(f"A new person is in the bus")
         else:
             print("The bus is full, wait in the line. ")    
         
     def get_off_the_bus(self):
-        if self.counter > 0:
-            self.counter -= 1
-            print(f"Current amount of passengers is {self.counter}")
+        if self.passengers:
+            self.passengers.pop()
+            print(f"A person has abandoned the bus")
         else:
             print("The bus is empty... ") 
     
@@ -29,13 +30,13 @@ class Bus:
             
             if option == 1:
                 self.get_in_the_bus()
-                print(f"Current passengers {self.counter}/5")
+                print(f"Current passengers {len(self.passengers)}/{self.maximum_passengers}")
             if option == 2: 
                 self.get_off_the_bus()
-                print(f"Current passengers {self.counter}/5")
+                print(f"Current passengers {len(self.passengers)}/{self.maximum_passengers}")
             if option == 3:
-                break       
-            
+                break 
+  
 my_bus_program = Bus()
 my_bus_program.menu()
             
