@@ -1,52 +1,71 @@
 import math
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 class Shape(ABC):
-    pass
+    
 
-    @abstractclassmethod
-    def calculate_perimeter ():
+    @abstractmethod
+    def calculate_perimeter (self):
+        #todas las figuras pueden calcular Perimetro
+        #pero de diferentes formas
         pass
     
-    def calculate_area ():
+    @abstractmethod
+    def calculate_area (self):
+        #todas las figuras pueden calcular Area 
+        #pero de diferentes formas
         pass
     
 class Circle(Shape):
-    def calculate_perimeter(self, radio):   
-        result = 2 * math.pi * radio
-        print(f"perimeter: {result}")
+    def __init__(self, radio):
+        self.radio = radio 
     
-    def calculate_area(self, radio):
-        result = math.pi * ( radio ** 2 )
-        print(f"Area: {result}")
+    def calculate_perimeter(self):   
+        result = 2 * math.pi * self.radio
+        print(f"perimeter: {result:.2f}")
+    
+    def calculate_area(self):
+        result = math.pi * ( self.radio ** 2 )
+        print(f"Area: {result:.2f}")
                
         
 class Square(Shape):
-    def calculate_perimeter(self, lado):
-        result = lado * 4 
+    def __init__(self, lado):
+        self.lado = lado
+        
+    def calculate_perimeter(self):
+        result = self.lado * 4 
         print(f"perimeter: {result}")
         
-    def calculate_area(self, lado):
-        result = lado * lado
+    def calculate_area(self):
+        result = self.lado * self.lado
         print(f"Area: {result}") 
 
 class Rectangle(Shape):
-    def calculate_perimeter(self, lado, ancho):
-        result = 2 * (lado + ancho)
+    def __init__(self, lado, ancho):
+        self.lado = lado
+        self.ancho = ancho
+    
+    
+    def calculate_perimeter(self):
+        result = 2 * (self.lado + self.ancho)
         print(f"perimeter: {result}") 
         
-    def calculate_area(self, lado, ancho):
-        result = lado * ancho
-        print(f"Area: {result}")         
+    def calculate_area(self):
+        result = self.lado * self.ancho
+        print(f"Area: {result}")  
+               
 print("_____Circulo")        
-my_calcu = Circle()
-my_calcu.calculate_perimeter(25)
-my_calcu.calculate_area(25)
+my_calcu = Circle(25)
+my_calcu.calculate_perimeter()
+my_calcu.calculate_area()
+
 print("_____Cuadrado")  
-my_calcu = Square()
-my_calcu.calculate_perimeter(25)
-my_calcu.calculate_area(25)  
+my_calcu = Square(25)
+my_calcu.calculate_perimeter()
+my_calcu.calculate_area() 
+ 
 print("_____Rectangulo")  
-my_calcu = Rectangle() 
-my_calcu.calculate_perimeter(25,50) 
-my_calcu.calculate_area(20,50)      
+my_calcu = Rectangle(25, 50) 
+my_calcu.calculate_perimeter() 
+my_calcu.calculate_area()      
