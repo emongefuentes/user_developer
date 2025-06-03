@@ -1,0 +1,32 @@
+Herencia multiple:
+
+-No todos los lenguajes trabajan con herencia multiple
+-Este se asocial a conflictos como el del rombo-diamante
+-Se asocial Tambien a cierta deficultad por el orden que debe mantenerse, aunque personalmente, consider que para la creacion de cualquier codigo, es importante mantener 
+cierto nivel alto de orden y conocimiento de que estamos programando.
+-Se recomienda el uso moderado
+-Python para remediar parte del problema, trabaja con method resolution order (MRO)
+-Al usarla es importante saber que vamos a trabajar con temas communes y que queramos reutiliar
+-
+
+
+Tenemos puntos importantes como:
+1. Reutilizacion de Código
+2. Division de funciones en mas pequeñas
+3. Composicion de diferentes clases
+4. Organizacion
+5. Evitar duplicacion de ideas
+
+Por ultimo, un tema que no he visto, seria Mixin:
+copiado y pegado seria:
+
+"Un mixin es una clase pequeña que agrega funcionalidad específica a otra clase mediante herencia, sin ser una clase principal por sí sola."
+
+.Este no representa un objeto complete
+.No se puede usar sola
+.Y se mezcla con otras clases para añadir funcionalidades utiles. 
+
+En mi opinion personal, partiendo de la limpieza del codigo como una Buena practica
+considero que la utilizacion de esta herencia despues de haber leido un poco al respecto,
+requiere de organizacion previa, entender bien que vamos a programar y prever cualquier possible error a la hora de reutilizar metodos. Entender muy bien el funcionamiento de MRO, para sacar el mayor provecho a la logica. 
+
